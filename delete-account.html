@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Account – Smart Sense Field Reports</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f0f4ff; color: #1a1a2e; line-height: 1.7;
+      min-height: 100vh; display: flex; flex-direction: column;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0d1b3e 0%, #1565c0 60%, #1e88e5 100%);
+      padding: 60px 24px 48px; text-align: center; color: #fff;
+    }
+    .hero-icon {
+      width: 72px; height: 72px;
+      background: rgba(255,255,255,.15);
+      border: 2px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 32px; margin-bottom: 20px;
+    }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; }
+    .hero p  { margin-top: 10px; opacity: .75; font-size: .95rem; }
+    .container { max-width: 680px; margin: 0 auto; padding: 40px 24px 80px; flex: 1; }
+    .card {
+      background: #fff; border-radius: 20px; padding: 36px 40px;
+      margin-bottom: 20px; box-shadow: 0 4px 20px rgba(21,101,192,.08);
+    }
+    .card-header {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 20px; padding-bottom: 16px;
+      border-bottom: 2px solid #f0f4ff;
+    }
+    .card-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+    .card-icon.red  { background: #fee2e2; }
+    .card-icon.blue { background: #e8f0fe; }
+    .card-icon.warn { background: #fef3c7; }
+    .card-header h2 { font-size: 1.15rem; font-weight: 700; color: #1565c0; }
+    p { margin-bottom: 12px; color: #374151; font-size: .95rem; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    ul li { color: #374151; font-size: .95rem; margin-bottom: 6px; }
+    ul li::marker { color: #1565c0; }
+    .warning-box {
+      background: #fef3c7; border-left: 4px solid #f59e0b;
+      border-radius: 0 10px 10px 0; padding: 14px 18px;
+      margin: 16px 0; font-size: .9rem; color: #92400e;
+    }
+    .info-box {
+      background: #e8f0fe; border-left: 4px solid #1565c0;
+      border-radius: 0 10px 10px 0; padding: 14px 18px;
+      margin: 16px 0; font-size: .9rem; color: #1a3a6b;
+    }
+    .email-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, #1565c0, #1e88e5);
+      color: #fff; text-decoration: none;
+      padding: 14px 28px; border-radius: 14px;
+      font-size: 1rem; font-weight: 600; margin-top: 8px;
+      box-shadow: 0 4px 14px rgba(21,101,192,.35);
+      transition: opacity .2s;
+    }
+    .email-btn:hover { opacity: .9; }
+    .steps { counter-reset: step; list-style: none; padding: 0; margin-bottom: 0; }
+    .steps li {
+      counter-increment: step; display: flex;
+      gap: 14px; margin-bottom: 16px; align-items: flex-start;
+    }
+    .steps li::before {
+      content: counter(step);
+      min-width: 30px; height: 30px;
+      background: #1565c0; color: #fff; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem; font-weight: 700; flex-shrink: 0; margin-top: 2px;
+    }
+    .steps li p { margin: 0; }
+    .footer {
+      text-align: center; padding: 28px 24px;
+      background: #fff; border-top: 1px solid #e0e7ff;
+      color: #6b7280; font-size: .85rem;
+    }
+    .footer a { color: #1565c0; text-decoration: none; }
+    @media (max-width: 600px) { .card { padding: 24px 20px; } }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-icon">🗑️</div>
+  <h1>Delete Account</h1>
+  <p>Smart Sense Field Reports Application</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-header"><div class="card-icon blue">📧</div><h2>How to Request Account Deletion</h2></div>
+    <p>Since Smart Sense Field Reports is an internal business application for authorized employees, account deletion is handled by the system administrator.</p>
+    <p>To request deletion of your account, please send an email to:</p>
+    <a href="mailto:ahmedtarek.apps@gmail.com?subject=Account%20Deletion%20Request%20-%20Smart%20Sense&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20the%20deletion%20of%20my%20account.%0A%0AUsername%3A%20%5BYour%20Username%5D%0AEmployee%20Name%3A%20%5BYour%20Name%5D%0AEmployee%20Code%3A%20%5BYour%20Code%5D%0A%0AThank%20you." class="email-btn">
+      ✉️ ahmedtarek.apps@gmail.com
+    </a>
+    <div class="info-box" style="margin-top:20px;">
+      Please include your <strong>username</strong>, <strong>employee name</strong>, and <strong>employee code</strong> in your email so we can process your request quickly.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-icon blue">📋</div><h2>Deletion Process</h2></div>
+    <ol class="steps">
+      <li><p>Send a deletion request email to <strong>ahmedtarek.apps@gmail.com</strong> with your account details.</p></li>
+      <li><p>The administrator will verify your identity and confirm the request within <strong>3 business days</strong>.</p></li>
+      <li><p>Your account and all associated data will be permanently deleted from our servers.</p></li>
+      <li><p>You will receive a confirmation email once the deletion is complete.</p></li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-icon red">🗂️</div><h2>What Data Will Be Deleted</h2></div>
+    <p>Upon account deletion, the following data will be permanently removed:</p>
+    <ul>
+      <li>Your account credentials (username, password)</li>
+      <li>Your employee profile (name, code, role)</li>
+      <li>All field reports you have submitted</li>
+      <li>All notifications associated with your account</li>
+      <li>Vacation records</li>
+      <li>Activity audit logs</li>
+    </ul>
+    <div class="warning-box">
+      ⚠️ <strong>This action is irreversible.</strong> Once your account is deleted, all your data will be permanently removed and cannot be recovered.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-icon warn">⏱️</div><h2>Data Retention After Request</h2></div>
+    <p>After your deletion request is confirmed, your data will be removed within <strong>7 days</strong>. During this period, your account will be deactivated and you will not be able to log in.</p>
+    <p>If you change your mind, you may cancel your request by contacting us before the deletion is processed.</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>© 2026 Smart Sense Field Reports. All rights reserved.</p>
+  <p style="margin-top:6px;">
+    <a href="index.html">Privacy Policy</a>
+  </p>
+</div>
+
+</body>
+</html>
